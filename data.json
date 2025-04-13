@@ -1,0 +1,12 @@
+[
+  {
+    "title": "JavaScript Basics",
+    "description": "Learn variables, functions, loops and more!",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "title": "Working with APIs",
+    "description": "Fetch data and build dynamic sites using APIs.",
+    "image": "https://via.placeholder.com/150"
+  }
+]
