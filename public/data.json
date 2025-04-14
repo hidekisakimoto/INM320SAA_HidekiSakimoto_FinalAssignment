@@ -1,12 +1,20 @@
-[
-  {
-    "title": "JavaScript Basics",
-    "description": "Learn variables, functions, loops and more!",
-    "image": "https://via.placeholder.com/150"
-  },
-  {
-    "title": "Working with APIs",
-    "description": "Fetch data and build dynamic sites using APIs.",
-    "image": "https://via.placeholder.com/150"
-  }
-]
+{
+  "cards": [
+    {
+      "title": "Unresolved",
+      "value": 60
+    },
+    {
+      "title": "Overdue",
+      "value": 16
+    },
+    {
+      "title": "Open",
+      "value": 43
+    },
+    {
+      "title": "On Hold",
+      "value": 64
+    }
+  ]
+}

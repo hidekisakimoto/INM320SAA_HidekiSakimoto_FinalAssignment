@@ -1,26 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-    fetch('data.json')
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('card-container');
-  
-        data.forEach(item => {
-          const col = document.createElement('div');
-          col.className = 'col-md-6 col-lg-4';
-  
-          col.innerHTML = `
-            <div class="card h-100">
-              <img src="${item.image}" class="card-img-top" alt="${item.title}">
-              <div class="card-body">
-                <h5 class="card-title">${item.title}</h5>
-                <p class="card-text">${item.description}</p>
-              </div>
-            </div>
-          `;
-  
-          container.appendChild(col);
-        });
-      })
-      .catch(error => console.error('Error loading JSON:', error));
+async function loadCardData() {
+  const response = await fetch('./data.json');
+  const data = await response.json();
+
+  // Select all stat cards
+  const statCards = document.querySelectorAll('.stats-card');
+
+  data.cards.forEach((item, index) => {
+    // console.log(`📝 Updating card ${index + 1}:`, item);
+    if (statCards[index]) {
+      const label = statCards[index].querySelector('.stats-label');
+      const value = statCards[index].querySelector('.stats-value');
+
+      label.textContent = item.title;
+      value.textContent = item.value;
+    }
   });
-  
+}
+
+loadCardData();
